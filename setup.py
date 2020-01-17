@@ -29,7 +29,7 @@ import setup_build, setup_configure
 
 VERSION = '2.10.0'
 
-NUMPY_DEP = 'numpy>=1.7'
+NUMPY_DEP = 'numpy==1.17.3'
 
 # these are required to use h5py
 RUN_REQUIRES = [NUMPY_DEP, "cached-property"]
