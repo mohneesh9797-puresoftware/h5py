@@ -44,6 +44,16 @@ matrix:
         - tox
         - pip install doctr
         - doctr deploy . --built-docs docs_api/_build/html
+    - python: 3.7
+      arch: arm64
+      env:
+        - TOXENV=apidocs
+        - HDF5_VERSION=1.10.5
+        - HDF5_DIR=$HDF5_CACHE_DIR/$HDF5_VERSION
+      script:
+        - tox
+        - pip install doctr
+        - doctr deploy . --built-docs docs_api/_build/html
 
     # MPI tests
     # TODO: We should test with newer versions of HDF5
