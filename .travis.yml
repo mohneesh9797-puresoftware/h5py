@@ -50,6 +50,9 @@ matrix:
         - TOXENV=apidocs
         - HDF5_VERSION=1.10.5
         - HDF5_DIR=$HDF5_CACHE_DIR/$HDF5_VERSION
+      install:
+        - pip install tox codecov
+        - ci/travis/get_hdf5_if_needed.sh
       script:
         - tox
         - pip install doctr
